@@ -107,3 +107,8 @@ func (a *API) Delete(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 	w.Write([]byte(`{"message": "ok", "error": false}`))
 }
+
+func Ping(w http.ResponseWriter, r *http.Request) {
+	w.WriteHeader(http.StatusOK)
+	w.Write([]byte(`{"message": "pong", "error": false}`))
+}

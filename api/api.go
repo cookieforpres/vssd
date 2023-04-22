@@ -30,6 +30,7 @@ func (a *API) Start() error {
 	r.HandleFunc("/write", a.Write)
 	r.HandleFunc("/read/{name}", a.Read)
 	r.HandleFunc("/delete/{name}", a.Delete)
+	r.HandleFunc("/__ping__", Ping)
 
 	http.Handle("/", r)
 	if a.Verbose {
